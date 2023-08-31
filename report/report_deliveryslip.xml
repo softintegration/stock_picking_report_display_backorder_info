@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template inherit_id="stock.report_delivery_document" id="report_delivery_document_inherited">
+        <xpath expr="//t[@t-if='o.backorder_ids and backorders']" position="attributes">
+            <attribute name="t-if">o.backorder_ids and backorders and o.picking_type_id.enable_backorder_info_delivery_report</attribute>
+        </xpath>
+    </template>
+
+
+</odoo>
